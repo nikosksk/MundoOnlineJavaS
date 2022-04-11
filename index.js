@@ -1,8 +1,9 @@
-function saludo(){
-    let nombre = prompt("Ingrese su nombre")
-    let alerta = alert("Bienvenido"+ " " + nombre + " " + "a Mundo Online")
-}
-saludo()
+
+// function saludo(){
+//     let nombre = prompt("Ingrese su nombre")
+//     let alerta = alert("Bienvenido"+ " " + nombre + " " + "a Mundo Online")
+// }
+// saludo()
 
 let carrito = []
 let precio = 0
@@ -17,27 +18,27 @@ function agregar(prod){
     sumar(prod)
 }
 
-function administrador(){
-    let response = prompt("Que desea hacer, elija una opcion \n 1. Agregar al carrito  \n 2. Finalizar")
-    if(response !== "2"){
-        item()
-    } else{
-        return alert("su carrito es:" + " \n" + JSON.stringify(carrito) + "\nEl precio es "+ carrito)
-    }
-}
-administrador()
+// function administrador(){
+//     let response = prompt("Que desea hacer, elija una opcion \n 1. Agregar al carrito  \n 2. Finalizar")
+//     if(response !== "2"){
+//         item()
+//     } else{
+//         return alert("su carrito es:" + " \n" + JSON.stringify(carrito) + "\nEl precio es "+ carrito)
+//     }
+// }
+// administrador()
 
-function item(){
-    const name = prompt("Ingrese el nombre del producto")
-    const precio = prompt("Ingrese precio")
-    const aux = {
-        name: name,
-        precio: parseInt(precio,0)
-    }
-    agregar(aux)
-    administrador()
-}
-// item();
+// function item(){
+//     const name = prompt("Ingrese el nombre del producto")
+//     const precio = prompt("Ingrese precio")
+//     const aux = {
+//         name: name,
+//         precio: parseInt(precio,0)
+//     }
+//     agregar(aux)
+//     administrador()
+// }
+item();
 
 agregar({
         id: 0,
@@ -107,11 +108,15 @@ const productos = [{
     },
 
 ]
-// DOM 
+// DOM
 const menu = document.querySelector("#bienvenida")
-bienvenida.innerHTML = "Bienvenidos a DOM"
+// bienvenida.innerHTML = "Bienvenidos a DOM"
 
 // const items = productos.map((i)=>`${i.name} +""+ ${i.price}`)
+
+// eventos
+
+
 
 
 

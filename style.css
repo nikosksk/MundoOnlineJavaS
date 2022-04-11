@@ -1,9 +1,8 @@
 .cabecera .btn{
     font-size: xx-large;
     font-family: monospace;
-    letter-spacing: 5px;
-    margin: 0px 0px 50px 140px;
-    padding: 7px;
+    letter-spacing: 10px;
+    margin-right: 200px;
     text-decoration: none;
     color:rgb(27, 89, 97)
     
@@ -11,4 +10,74 @@
 .cabecera .btn:hover{
     background-color: rgb(130, 233, 247);
     border: 1px solid rgb(66, 132, 141);
+}
+
+body #form{
+    font-family: monospace;
+    background: #2980B9;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #FFFFFF, #6DD5FA, #2980B9);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #FFFFFF, #6DD5FA, #2980B9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    height: 650px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
+h1{
+    text-align: center;
+    font-weight: 700;
+}
+form {
+    background: white;
+    padding: 10px 0;
+    box-shadow: 0 0 3px 0  rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    border: none;
+}
+
+form {
+   width: 100%;
+   
+}
+form .grupo{
+   margin-left: 560px;
+   padding: 10px;
+    
+}
+input{
+    background: none;
+    font-size: 15px;
+    padding: 10px 5px 10px 5px;
+    border-bottom: 1px solid;
+}
+input:focus{
+    outline: none;
+    color: rgb(94, 93, 93);
+}
+label{
+    color: white;
+    font-size: 16px;
+    left: 5px;
+    top: 10px;
+    transition: 0.5 ease all;
+    pointer-events: none;
+}
+input:focus~label,
+input:valid~label{
+    top:-14px;
+    font-size: 12px;
+    color:rgb(70, 160, 172);
+}
+button{
+    font-family:monospace;
+    background: #2980B9;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #FFFFFF, #6DD5FA, #2980B9);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #FFFFFF, #6DD5FA, #2980B9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border: none;
+    display: block;
+    width: 17%;
+    margin: 10px auto;
+    color: white;
+    height: 40px;
+    font-size: 16px;
+    cursor: pointer;
 }
