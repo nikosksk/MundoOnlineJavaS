@@ -4,10 +4,98 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/tienda.css">
+    <link rel="stylesheet" href="/index.html">
     <title>Tienda</title>
 </head>
 <body>
-    
-    <script src="/index.js"></script>
+    <div>
+        <a href="/index.html" class="btn">Volver</a>
+    </div>
+    <div  id="carrito">
+    <table id="lista-carrito" class="table">
+        <thead>
+            <tr>
+                <th>Imagen</th>
+                <th>Nombre</th>
+                <th>Precio</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <a href="#" id="vaciar-carrito" class="btn">Vaciar Carrito</a>
+    <a href="#" id="procesar-pedido" class="btn">Procesar Compra</a>
+    </div>
+
+    <div class="">
+        <h1 class="">Lista de Productos</h1>
+        <p class="">Selecciona uno de nuestros productos y accede a un descuento</p>
+    </div>
+
+    <div class="container" id="lista-productos">
+
+    <div class="container">
+        <div class="card">
+            <img src="/assets/imagenes/mandops5.jpg">
+            <h4>Play Station 5</h4>
+            <p>Llevate una PS5 con juegos de ultima generacion</p>
+            <span class="precio">$800dls</span>
+            <a href="#" id="lista" class="btn agregar-carrito">Comprar</a>
+        </div>
+    </div>
+    <div class="container">
+        <div class="card">
+            <img src="/assets/imagenes/mandoxbox.jpg">
+            <h4>Xbox Series X</h4>
+            <p>La consola mas potente del mercado</p>
+            <span class="precio">$800dls</span>
+            <a href="#" id="lista" class="btn agregar-carrito">Comprar</a>
+        </div>
+    </div>
+    <h1 class="tittle"></h1>
+    <div class="container">
+        <div class="card">
+            <img src="/assets/imagenes/mandons.jpg">
+            <h4>Nintendo Switch</h4>
+            <p>Con su lista unica de juegos y grandes aventuras</p>
+            <span class="precio">$650dls</span>
+            <a href="#" id="lista" class="btn agregar-carrito">Comprar</a>
+        </div>
+    </div>
+    <h1 class="tittle"></h1>
+    <div class="container">
+        <div class="card">
+            <img src="/assets/imagenes/HorizonForbiddenWest.jpg">
+            <h4>Horizon Forbidden West</h4>
+            <p>Las aventuras de Eloy en un mundo sorprendente</p>
+            <span class="precio">$80dls</span>
+            <a href="#" id="lista" class="btn agregar-carrito">Comprar</a>
+        </div>
+    </div>
+    <h1 class="tittle"></h1>
+    <div class="container">
+        <div class="card">
+            <img src="/assets/imagenes/juegoforza.jpg">
+            <h4>Forza Horizon 5</h4>
+            <p>Grandes carreras en terrenos Mexicanos</p>
+            <span class="precio">$80dls</span>
+            <a href="#" id="lista" class="btn agregar-carrito">Comprar</a>
+        </div>
+    </div>
+    <h1 class="tittle"></h1>
+    <div class="container">
+        <div class="card">
+            <img src="/assets/imagenes/marioodysey.jpg">
+            <h4>Super Mario Bross Odyssey</h4>
+            <p>Increibles aventuras con Mario y Luigui</p>
+            <span class="precio">$70dls</span>
+            <a href="#" id="lista" class="btn agregar-carrito">Comprar</a>
+        </div>
+    </div>
+    </div>
+    <script src="/index.js" defer></script>
+    <script src="/pedido.js" defer></script>
 </body>
 </html>
