@@ -10,34 +10,34 @@
 
     <title>Tienda</title>
 </head>
-<body>
+<body style="background-color: #0cbaba;
+background-image: linear-gradient(315deg, #0cbaba 0%, #380036 74%);
+;background-attachment:fixed">
   <nav class="navbar navbar-dark bg-dark">
     <div class="container-fluid">
       <a class="navbar-brand" href="/index.html">
-        <img src="/assets/imagenes/icono.png" alt="" width="30" height="24" class="d-inline-block align-text-top">
-        Mundo Online
+        <img src="/assets/imagenes/iconofond.png" alt="" width="130" height="50" class="d-inline-block align-text-top">
+        
       </a>
       <ul class="btn-group">
         <li class="btn-group">
           <a class="btn btn-outline-secondary" href="/index.html">Volver</a>
         </li>
         <li class="btn-group">
-          <a class="btn btn-outline-secondary" href="/assets/pages/registrar.html">Ingresar</a>
+          <a class="btn btn-outline-secondary" href="/assets/pages/ingresar.html">Ingresar</a>
         </li>
         <li class="btn-group">
-            <a class="btn btn-outline-secondary" href="/assets/pages/ingresar.html">Registrar</a>
+            <a class="btn btn-outline-secondary" href="/assets/pages/registrar.html">Registrar</a>
         </li>
     </ul>
     </div>     
   </nav>
   <div class="container">
-    <h1>Carrito</h1>
     <hr>
-
     <table class="table">
         <thead>
-            <tr>
-                <th scope="col">#</th>
+            <tr style="color: white">
+                <th scope="col">USD$</th>
                 <th scope="col">Item</th>
                 <th scope="col">Cantidad</th>
                 <th scope="col">Accion</th>
@@ -47,7 +47,7 @@
         <tbody id="items"></tbody>
         <tfoot>
             <tr id="footer">
-                <th scope="row" colspan="5">Carrito vacio</th>
+                <th scope="row" colspan="5"></th>
             </tr>
         </tfoot>
     </table>
@@ -55,19 +55,19 @@
     <div class="row" id="cards"></div>
 </div>
 <template id="template-footer">
-    <th scope="row" colspan="2">Total de productos</th>
-    <th>10</th>
+    <th scope="row" colspan="2" style="color: white">Total de productos</th>
+    <td style="color: white">10</td>
     <td>
-        <button class="btn btn-danger btn-sm" id="vacias-carrito">
+        <button class="btn btn-danger btn-sm" id="vaciar-carrito">
             vaciar todo
         </button>
     </td>
-    <td class="font-weight-bold">$ <span>5000</span></td>
+    <td class="font-weight-bold" style="color: white">$ <span>5000</span></td>
 </template>
 
-<template id="template-carrito">
-    <tr>
-        <th scope="row">id</th>
+<template id="template-carrito" style="color: white">
+    <tr style="color: white">
+        <th scope="row" style="color: white">id</th>
         <td>Play Station 5</td>
         <td>1</td>
         <td>
@@ -82,7 +82,7 @@
     </tr>
 </template>
 
-<template id="template-card">
+<template id="template-card" style="color: white">
     <div class="col-12 mb-2 col-md-4">
         <div class="card">
             <img src="" alt="" class="img-card-top">

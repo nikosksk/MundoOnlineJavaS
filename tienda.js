@@ -10,31 +10,31 @@ const prueba = [
     "name": "item2",
     "tittle": "Xbox Series X",
     "price": "400",
-    "imagen": "https://laverdadnoticias.com/__export/1600624173295/sites/laverdad/img/2020/09/20/ps5_lanzamiento.jpg_1834093470.jpg"
+    "imagen": "https://th.bing.com/th/id/R.bac485b1bb3d1569e28d3328eef04d79?rik=SO4Ms7FS8N5jSA&pid=ImgRaw&r=0"
 },{
     "id": 3,
     "name": "item3",
     "tittle": "Nintendo Switch",
     "price": "650",
-    "imagen": "https://laverdadnoticias.com/__export/1600624173295/sites/laverdad/img/2020/09/20/ps5_lanzamiento.jpg_1834093470.jpg"
+    "imagen": "https://1.bp.blogspot.com/-86PlDZ8vRkg/XG-wrtMhUWI/AAAAAAAABzA/MQlmRGd0OrUul2yYRXETRncCCtd_cobxQCLcBGAs/s1600/Switch.jpg"
 },{
     "id": 4,
     "name": "item4",
     "tittle": "God of War 4",
     "price": "60",
-    "imagen": "https://laverdadnoticias.com/__export/1600624173295/sites/laverdad/img/2020/09/20/ps5_lanzamiento.jpg_1834093470.jpg"
+    "imagen": "https://th.bing.com/th/id/R.3eb2a8b0ab3ef12c683fe95a444c6169?rik=%2f4wX4mlBqpPzYA&pid=ImgRaw&r=0"
 },{
     "id": 5,
     "name": "item5",
     "tittle": "Forza Horizon 5",
    "price": "70",
-   "imagen": "https://laverdadnoticias.com/__export/1600624173295/sites/laverdad/img/2020/09/20/ps5_lanzamiento.jpg_1834093470.jpg"
+   "imagen": "https://th.bing.com/th/id/OIP.sAkvSdZqTtuNG8aeXsfZuQHaEK?pid=ImgDet&rs=1"
 },{
     "id": 6,
     "name": "item6",
    "tittle": "Mario Bross Odyssy",
    "price": "50",
-   "imagen": "https://laverdadnoticias.com/__export/1600624173295/sites/laverdad/img/2020/09/20/ps5_lanzamiento.jpg_1834093470.jpg"
+   "imagen": "https://th.bing.com/th/id/R.e3fca9a25b87dfa98633c2ff01bd46a3?rik=8WUGeJJQ83FI7w&pid=ImgRaw&r=0"
 }
 ]
 
@@ -55,9 +55,16 @@ console.log(item)
 
 document.addEventListener("DOMContentLoaded", () => {
     fetchData()
+    if(localStorage.getItem("carrito")){
+        carrito = JSON.parse(localStorage.getItem("carrito"))
+        pintarCarrito()
+    }
 })
 cards.addEventListener("click", e => {
     addCarrito(e)
+})
+items.addEventListener("click", e =>{
+    btnAccion(e)
 })
 const fetchData = async() => {
     try{
@@ -121,14 +128,52 @@ const pintarCarrito = () => {
     items.appendChild(fragment)
 
     pintarFooter()
+
+    window.localStorage.setItem("carrito", JSON.stringify(carrito))
 }
 const pintarFooter = () =>{
     footer.innerHTML=""
     if(Object.keys(carrito).length === 0){
-        footer.innerHTML= `<th scope="row" colspan="5">Carrito vacio</th>`
-
+        footer.innerHTML= "<th scope=`row` colspan=`5`></th>"
+        return
     }
-const nCantidad = Object.values(carrito).reduce((acc, {}) => {
+    
+const nCantidad = Object.values(carrito).reduce((acc, {cantidad}) => acc + cantidad,0)
+const nPrice = Object.values(carrito).reduce((acc, {cantidad, price}) => acc + cantidad * price,0)
 
+templateFooter.querySelectorAll("td")[0].textContent = nCantidad
+templateFooter.querySelector("span").textContent = nPrice
+
+const clone = templateFooter.cloneNode(true)
+fragment.appendChild(clone)
+footer.appendChild(fragment)
+
+const btnVaciar = document.getElementById("vaciar-carrito")
+btnVaciar.addEventListener("click", () => {
+    carrito = {}
+    pintarCarrito()
 })
 }
+
+const btnAccion = e =>{
+    if(e.target.classList.contains("btn-info")){
+        carrito[e.target.dataset.id]
+
+        const producto = carrito[e.target.dataset.id]
+        producto.cantidad = carrito[e.target.dataset.id].cantidad + 1
+        carrito[e.target.dataset.id] = {...producto}
+        pintarCarrito()
+    }
+    if(e.target.classList.contains("btn-danger")){
+        const producto = carrito[e.target.dataset.id].cantidad --
+        if(producto.cantidad === 0){
+            delete carrito[e.target.dataset.id]
+        }
+        pintarCarrito()
+    
+    }
+    e.stopPropagation()
+}
+
+
+

@@ -1,83 +1,60 @@
-.cabecera .btn{
-    font-size: xx-large;
-    font-family: monospace;
-    letter-spacing: 10px;
-    margin-right: 200px;
-    text-decoration: none;
-    color:rgb(27, 89, 97)
-    
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
-.cabecera .btn:hover{
-    background-color: rgb(130, 233, 247);
-    border: 1px solid rgb(66, 132, 141);
+body{
+    background-image: url('#');
 }
-
-body #form{
-    font-family: monospace;
-    background: #2980B9;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to bottom, #FFFFFF, #6DD5FA, #2980B9);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to bottom, #FFFFFF, #6DD5FA, #2980B9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    height: 650px;
-    justify-content: center;
-    align-items: center;
-    margin-top: 100px;
-}
-h1{
-    text-align: center;
-    font-weight: 700;
-}
-form {
-    background: white;
-    padding: 10px 0;
-    box-shadow: 0 0 3px 0  rgba(255, 255, 255, 0.9);
-    border-radius: 10px;
-    border: none;
+#formulario{
+   width: 400px;
+   background: #24303c;
+   padding: 30px;
+   margin: auto;
+   margin-top: 100px;
+   border-radius: 4px;
+   font-family: 'calibri';
+   color: white;
+   box-shadow: 7px 13px 37px #000;
 }
 
-form {
-   width: 100%;
-   
+#formulario h3{
+    font-size: 22px;
+    margin-bottom: 20px;
 }
-form .grupo{
-   margin-left: 560px;
-   padding: 10px;
-    
+.control{
+    width: 100%;
+    background: #24303c;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid #1f53c5;
+    font-size: 18px;
+    color:white;
 }
-input{
-    background: none;
-    font-size: 15px;
-    padding: 10px 5px 10px 5px;
-    border-bottom: 1px solid;
-}
-input:focus{
-    outline: none;
-    color: rgb(94, 93, 93);
-}
-label{
-    color: white;
-    font-size: 16px;
-    left: 5px;
-    top: 10px;
-    transition: 0.5 ease all;
-    pointer-events: none;
-}
-input:focus~label,
-input:valid~label{
-    top:-14px;
-    font-size: 12px;
-    color:rgb(70, 160, 172);
-}
-button{
-    font-family:monospace;
-    background: #2980B9;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to bottom, #FFFFFF, #6DD5FA, #2980B9);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to bottom, #FFFFFF, #6DD5FA, #2980B9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    border: none;
-    display: block;
-    width: 17%;
-    margin: 10px auto;
-    color: white;
+#formulario p {
     height: 40px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 30px;
+}
+#formulario a{
+    color:white;
+    text-decoration: none;
+}
+#formulario a:hover{
+    color:white;
+    text-decoration: underline;
+}
+#formulario #btn{
+    width: 100%;
+    background: #1f53c5;
+    border: none;
+    padding: 12px;
+    color: white;
+    margin: 16px 0;
     font-size: 16px;
-    cursor: pointer;
+}
+#formulario #btn:hover{
+    color: white;
 }

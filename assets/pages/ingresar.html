@@ -5,15 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <title>Ingresar</title>
     <link rel="stylesheet" href="/style.css">
+    <link href="//cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet">
+    <script defer src="//cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+    <script src="/ingreso.js" defer></script>
+    <title>Ingresar</title>
 </head>
-<body>
+<body style="background-color: #0cbaba;
+background-image: linear-gradient(315deg, #0cbaba 0%, #380036 74%);
+; background-attachment:fixed">
     <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand" href="/index.html">
-            <img src="/assets/imagenes/icono.png" alt="" width="30" height="24" class="d-inline-block align-text-top">
-            Mundo Online
+            <img src="/assets/imagenes/iconofond.png" alt="" width="130" height="50" class="d-inline-block align-text-top">
+            
           </a>
           <ul class="btn-group">
             <li class="btn-group">
@@ -23,98 +28,17 @@
                 <a class="btn btn-outline-secondary" href="/index.html">Volver</a>
             </li>
             <li class="btn-group">
-                <a class="btn btn-outline-secondary" href="/assets/pages/registrar.html">Ingresar</a>
+                <a class="btn btn-outline-secondary" href="/assets/pages/registrar.html">Registrar</a>
             </li>
         </ul>
         </div>     
-      </nav>
-    <div class="container">
-    <form class="row g-3">
-        <div class="col-md-4">
-          <label for="validationServer01" class="form-label">Usuario</label>
-          <input type="text" class="form-control is-valid" id="validationServer01" value="Usuario" required>
-        </div>
-        <div class="col-md-4">
-          <label for="validationServer02" class="form-label">Clave</label>
-          <input type="password" class="form-control is-valid" id="validationServer02" value="Contraseña" required>
-        </div>
-        <div class="col-md-4">
-          <label for="validationServerUsername" class="form-label">Email</label>
-          <div class="input-group has-validation">
-            <span class="input-group-text" id="inputGroupPrepend3">@</span>
-            <input type="text" class="form-control is-valid" id="validationServerUsername" aria-describedby="inputGroupPrepend3 validationServerUsernameFeedback" value="Correo Electronico" required>
-            <div id="validationServerUsernameFeedback" class="invalid-feedback">
-              Colocar email.
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <label for="validationServer03" class="form-label">Ciudad</label>
-          <input type="text" class="form-control is-valid" id="validationServer03" aria-describedby="validationServer03Feedback" value="Ciudad" required>
-          <div id="validationServer03Feedback" class="invalid-feedback">
-            Eliga ciudad.
-          </div>
-        </div>
-        <div class="col-md-3">
-          <label for="validationServer04" class="form-label">Provincia</label>
-          <select class="form-select is-valid" id="validationServer04" aria-describedby="validationServer04Feedback" value="Provincia" required>
-            <option selected disabled value="">Seleccionar</option>
-            <option>...</option>
-          </select>
-          <div id="validationServer04Feedback" class="invalid-feedback">
-            Eliga provincia.
-          </div>
-        </div>
-        <div class="col-12">
-          <div class="form-check">
-            <input class="form-check-input is-valid" type="checkbox" value="" id="invalidCheck3" aria-describedby="invalidCheck3Feedback" required>
-            <label class="form-check-label" for="invalidCheck3">
-              Aceptar terminos y condiciones
-            </label>
-            <div id="invalidCheck3Feedback" class="invalid-feedback">
-              No aceptaste terminos y condiciones.
-            </div>
-          </div>
-        </div>
-        <div class="col-12">
-          <button class="btn btn-primary" type="submit">Registrar</button>
-        </div>
-     </form>
-    </div>
-    <script>
-// const nombre = document.getElementById("nombre")
-// const password = document.getElementById("password")
-// const email = document.getElementById("email")
-// const form = document.getElementById("form")
-// const parrafo = document.getElementById("peligro")
-
-// form.addEventListener("submit", e=>{
-// e.preventDefault()
-// let entrar = false
-// let peligro = ""
-// let regexEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
-// parrafo.innerHTML= ""
-// if(nombre.value.length <6){
-//     alert("Nombre invalido")
-//     entrar= true
-// }
-// if(!regexEmail.test(email.value)){
-//     alert("Email no valido")
-//     entrar= true
-// }
-// if(password.value.length <8){
-//     alert("Clave invalida")
-//     entrar= true
-// }
-// if(entrar){
-//     parrafo.innerHTML = peligro
-// } else {
-//     parrafo.innerHTML = "Enviado"
-// }
-// })
-    </script>
-    <script src="/index.js" defer></script>
-    <script src="/registro.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+      </nav> 
+      <form id="formulario">
+        <h3>Ingresar</h3>
+        <input type="text" class="control" name="nombre" id="nombre" placeholder="Ingrese su nombre" required>
+        <input type="password" class="control" name="clave" id="clave" placeholder="Ingrese su Contraseña" required>
+        <input id="btn" type="button" value="Registrar">
+        <p>¿Has olvidado tu contraseña? <a href="#">¡Has click aqui!</a></p>
+      </form>
 </body>
 </html>
